@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="utf-8" />
+		<title>亚运倒计时</title>
+		<link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+ 
+    <style>
+        .preloader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: 99999;
+            background-color: #ffff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url(12.gif);
+        }
+      
+    </style>
+</head>
+ 
+<body>
+    <!-- 加载动画 -->
+    <div class="preloader"> <div class="appear"><marquee hspace="200" vspace="10" width=50%  scrolldelay="800" 	scrollamount="100" direction="right" >
+		杭州亚运会欢迎您！
+   		 </marquee></div></div>
+ 
+    <!-- 网页内容 -->
+<div class="container">
+		<marquee hspace="200" vspace="10" width=50%  scrolldelay="800" 	scrollamount="100" direction="right" onMouseOut="this.start()" onMouseOver="this.stop()">
+		杭州亚运会欢迎您！
+   		 </marquee>
+			 <h2><span>杭州亚运会开幕倒计时</span> 2022</h2>
+			 <div class="countdown">
+				 <div id="day">103</div>
+				 <div id="hour">9</div>
+				 <div id="minute">9</div>
+				 <div id="second">9</div>
+			 </div>
+		 </div>
+<div class="dropdown1" >
+   <img src="pic/1.jpg"   width="150" height="100" style="border-radius: 5px;"> 
+	<p>杭州奥体中心体育场</p>
+        <div class="dropdown-content1" >
+            <img src="pic/1.gif" width="300" height="200" style="border-radius: 10px;">
+
+            <div class="desc1">位于钱塘江畔的杭州奥体中心体育场，也是大家熟知的“大莲花”。届时，将承办杭州亚运会开、闭幕式和田径项目比赛，以及杭州亚残运会开、闭幕式。</div>
+        </div>
+    </div>
+ <div class="dropdown2" >
+   <img src="pic/2.jpg"   width="150" height="100" style="border-radius: 5px;"> 
+<p>富阳银湖体育中心</p>
+        <div class="dropdown-content2" >
+            <img src="pic/2.gif"  width="300" height="200" style="border-radius: 10px;">
+            <div class="desc2">场馆整体设计融合富阳特色，带有飞檐的射击综合馆富有江南水乡风格，别有一番柔和韵味。</div>
+        </div>
+    </div>	
+ <div class="dropdown3" >
+   <img src="pic/3.jpg"   width="150" height="100" style="border-radius: 5px;"> 
+<p>钱塘轮滑中心</p>
+        <div class="dropdown-content3" >
+            <img src="pic/3.gif"  width="300" height="200" style="border-radius: 10px;">
+            <div class="desc3">钱塘轮滑中心位于钱塘区东部湾总部基地,从高空俯瞰，场馆就像两个“6”融合叠加，也像一个“旋风陀螺”。</div>
+        </div>
+    </div>	
+ <div class="dropdown4" >
+   <img src="pic/4.jpg"   width="150" height="100" style="border-radius: 5px;"> 
+<p>黄龙体育中心</p>
+        <div class="dropdown-content4" >
+            <img src="pic/4.gif"  width="300" height="200" style="border-radius: 10px;">
+            <div class="desc4">全新改造提升的黄龙体育中心将打造运动休闲综合体、文体培训大本营、竞赛表演集聚区、场馆运营新典范、体育消费新场景.</div>
+        </div>
+    </div>	
+</html>
+<script type="text/javascript">
+
+	function getEndTime(myYear){
+		var myEndTime = new Date(''+myYear+'/09/10 20:00:00');
+		return myEndTime;
+	}
+
+	function countDown(){
+		var mydate = new Date();
+		var year = '2022';
+		var EndTime = getEndTime(year);
+		var NowTime = new Date();
+		if( (EndTime.getTime() - NowTime.getTime() ) < 0){
+			year = mydate.getFullYear() + 1;
+			EndTime = getEndTime(year);
+		}
+		var t = EndTime.getTime() - NowTime.getTime();
+
+
+
+		var d=Math.floor(t/1000/60/60/24);
+		var h=Math.floor(t/1000/60/60%24);
+		var m=Math.floor(t/1000/60%60);
+		var s=Math.floor(t/1000%60);
+
+		document.getElementById('day').innerText = d;
+		document.getElementById('hour').innerText = h;
+		document.getElementById('minute').innerText = m;
+		document.getElementById('second').innerText = s;
+	} 
+	setInterval(countDown,1000)
+</script>
+
+ 
+    <script>
+        $(window).on('load',function handlePreloader() {
+            if ($('.preloader').length) {
+                $('.preloader').delay(3600).fadeOut(500);
+            }
+        });
+    </script>
+</body>
+ 
+</html>
