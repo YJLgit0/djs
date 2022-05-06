@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fbf0f0;
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.appear {
+  text-align: center;
+  font-size: 5em;
+  line-height: 0.7em;
+  color: rgb(238 36 36);
+  margin-top: -150px;
+}
+.container {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  right: 20%;
+  bottom: 5%;
+  background: url(bg.png);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 50px 50px rgb(60 16 16 / 50%),
+    0 0 100px 100px rgb(233 152 152 / 10%);
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 800%;
+  line-height: 0.7em;
+  color: #323131;
+  margin-top: -10px;
+}
+
+.container h2 span {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 8px;
+  font-size: 20%;
+}
+.countdown {
+  display: flex;
+  margin-top: 50px;
+}
+.countdown div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #a0053a;
+  color: #fffafa;
+  margin: 0 15px;
+  font-size: 3em;
+  font-weight: 500;
+}
+.countdown div:before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background: #2734b9;
+  color: #ef9909;
+  font-size: 0.35em;
+  line-height: 35px;
+  font-weight: 300;
+}
+.container #day:before {
+  content: "天";
+}
+.container #hour:before {
+  content: "时";
+}
+.container #minute:before {
+  content: "分";
+}
+.container #second:before {
+  content: "秒";
+}
+marquee {
+  margin-top: 16%;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgb(238 36 36 / 50%);
+}
+
+.dropdown1 {
+  /* position为relative，下面的子元素可以作为参考 */
+  position: fixed;
+  /* 定义为行内块级元素 */
+  display: inline-block;
+  margin-top: 8%;
+  margin-left: 4%;
+}
+
+.dropdown-content1 {
+  /* 不显示该部分内容，包括图片 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  top: -75%;
+  left: 160px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown1:hover .dropdown-content1 {
+  /* 鼠标移上去的时候显示大图 */
+  display: block;
+}
+/* 设置下面的备注文字 */
+
+.desc1 {
+  padding: 15px;
+  text-align: left;
+}
+.dropdown2 {
+  /* position为relative，下面的子元素可以作为参考 */
+  position: fixed;
+  /* 定义为行内块级元素 */
+  display: inline-block;
+  margin-top: 30%;
+  margin-left: 4%;
+}
+
+.dropdown-content2 {
+  /* 不显示该部分内容，包括图片 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  top: -100%;
+  left: 160px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown2:hover .dropdown-content2 {
+  /* 鼠标移上去的时候显示大图 */
+  display: block;
+}
+/* 设置下面的备注文字 */
+
+.desc2 {
+  padding: 15px;
+  text-align: left;
+}
+.dropdown3 {
+  /* position为relative，下面的子元素可以作为参考 */
+  position: fixed;
+  /* 定义为行内块级元素 */
+  display: inline-block;
+  margin-top: 8%;
+  right: 4%;
+}
+
+.dropdown-content3 {
+  /* 不显示该部分内容，包括图片 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  top: -75%;
+  right: 160px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown3:hover .dropdown-content3 {
+  /* 鼠标移上去的时候显示大图 */
+  display: block;
+}
+/* 设置下面的备注文字 */
+
+.desc3 {
+  padding: 15px;
+  text-align: left;
+}
+.dropdown4 {
+  /* position为relative，下面的子元素可以作为参考 */
+  position: fixed;
+  /* 定义为行内块级元素 */
+  display: inline-block;
+  margin-top: 30%;
+  right: 4%;
+}
+
+.dropdown-content4 {
+  /* 不显示该部分内容，包括图片 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  top: -100%;
+  right: 160px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown4:hover .dropdown-content4 {
+  /* 鼠标移上去的时候显示大图 */
+  display: block;
+}
+/* 设置下面的备注文字 */
+
+.desc4 {
+  padding: 15px;
+  text-align: left;
+}
